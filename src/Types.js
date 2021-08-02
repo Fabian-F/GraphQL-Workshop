@@ -8,7 +8,8 @@ const AzubiType = new GraphQLObjectType({
     fields: () => ({
         id: { type: GraphQLID  },
         name: { type: GraphQLString },
-        lastname: { type: GraphQLString }
+        lastname: { type: GraphQLString },
+        betreuer_id: { type: GraphQLID },
     })
 });
 
