@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const azubiService = require('./azubiService');
+const betreuerService = require('./betreuerService');
 
 const { GraphQLString, GraphQLID, GraphQLNonNull } = graphql;
 
@@ -9,10 +9,10 @@ const add = {
     args: {
         name: { type: GraphQLNonNull(GraphQLString) },
         lastname: { type: GraphQLNonNull(GraphQLString) },
-        betreuer_id: { type: GraphQLNonNull(GraphQLID) },
+        abteilung: { type: GraphQLNonNull(GraphQLString) },
     },
     resolve: async (parent, args) => {
-        return await azubiService.create(args.name, args.lastname, args.betreuer_id);
+        return await betreuerService.create(args.name, args.lastname, args.betreuer_id);
     }
 }
 
@@ -22,10 +22,10 @@ const update = {
         id: { type: GraphQLNonNull(GraphQLID) },
         name: { type: GraphQLString },
         lastname: { type: GraphQLString },
-        betreuer_id: { type: GraphQLID },
+        abteilung: { type: GraphQLString },
     },
     resolve: async (parent, args) => {
-        return await azubiService.update(args.id, args.name, args.lastname, args.betreuer_id);
+        return await betreuerService.update(args.id, args.name, args.lastname, args.betreuer_id);
     }
 }
 
@@ -35,7 +35,7 @@ const remove = {
         id: { type: GraphQLNonNull(GraphQLID) }
     },
     resolve: async (parent, args) => {
-        return await azubiService.remove(args.id);
+        return await betreuerService.remove(args.id);
     }
 }
 

@@ -1,13 +1,16 @@
 const graphql = require('graphql');
-const azubiController = require('./azubi/azubiQuery');
+const azubiQuery = require('./azubi/azubiQuery');
+const betreuerQuery = require('./betreuer/betreuerQuery');
 
 const { GraphQLObjectType } = graphql;
 
 const RootQuery = new GraphQLObjectType({
     name: 'RootQuery',
     fields: {
-        azubi: azubiController.getOne,
-        azubis: azubiController.getAll,
+        azubi: azubiQuery.getOne,
+        azubis: azubiQuery.getAll,
+        betreuer: betreuerQuery.getOne,
+        allBetreuer: betreuerQuery.getAll
     }
 });
 

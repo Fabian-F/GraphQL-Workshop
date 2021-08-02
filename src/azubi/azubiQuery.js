@@ -1,9 +1,8 @@
 const graphql = require('graphql');
-const types = require('../Types')
+const { AzubiType } = require('../Types')
 const azubiService = require('./azubiService');
 
 const { GraphQLID, GraphQLList } = graphql;
-const { AzubiType } = types;
 
 // +++++ Queries +++++
 const getAll = {
