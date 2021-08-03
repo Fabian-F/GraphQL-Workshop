@@ -11,7 +11,7 @@ Create Databases in Postgres:
 Create Tables in Postgres:
 - betreuer(id, name, lastname, abteilung)\
 `CREATE TABLE betreuer (
-id SERIAL,
+id SERIAL PRIMARY KEY,
 name VARCHAR(30),
 lastname VARCHAR(30),
 abteilung VARCHAR(50)
@@ -19,7 +19,7 @@ abteilung VARCHAR(50)
 
 - azubi (id, name, lastname, betreuer_id)\
 `CREATE TABLE azubi (
-id SERIAL,
+id SERIAL PRIMARY KEY,
 name VARCHAR(30),
 lastname VARCHAR(30),
 FOREIGN KEY(betreuer_id) REFERENCES betreuer(id)
