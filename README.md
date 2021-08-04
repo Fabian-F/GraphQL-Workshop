@@ -31,7 +31,7 @@ FOREIGN KEY(betreuer_id) REFERENCES betreuer(id)
 
 Check if everything worked with:\
 `\d Azubi \d Betreuer`\
-Should look like that
+Should look like that\
 ![2021-08-04_09h49_59](https://user-images.githubusercontent.com/44290829/128142825-346edabd-7427-4fef-b7ed-0d0b6385e39f.png)
 
 
