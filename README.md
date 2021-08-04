@@ -24,13 +24,13 @@ psql -U postgres
 ```
 
 ### Create Databases in Postgres:
-- api
+api
 ```
 CREATE DATABASE api;
 ```
 
 ### Create Tables in Postgres:
-- betreuer(id, name, lastname, abteilung)
+- betreuer (id, name, lastname, abteilung)
 ```
 CREATE TABLE betreuer (
 id SERIAL PRIMARY KEY,
