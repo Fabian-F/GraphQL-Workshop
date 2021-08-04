@@ -36,7 +36,6 @@ async function update(id, name, lastname, betreuer_id) {
     }
 
     const queryString = `UPDATE azubi SET ` + query.join(", ") + ` WHERE id = ${id}`;
-    console.log(queryString);
 
     let result = await pool.query(queryString);
     if(result.rowCount === 0) {
