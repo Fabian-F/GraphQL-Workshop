@@ -1,12 +1,12 @@
 Mutation to fill the database with dummy values:
 ```
 mutation Step1 {
-  betreuer1: addBetreuer(name: "Jakob", lastname: "Klein", abteilung: "CES")
-  betreuer2: addBetreuer(name: "Alexander", lastname: "Klein", abteilung: "CES")
-  azubi1: addAzubi(name: "Osal", lastname: "Gotschiew", betreuer_id: 1)
-  azubi2: addAzubi(name: "Steven", lastname: "Schulz", betreuer_id: 1)
-  azubi3: addAzubi(name: "Fabian", lastname: "Forster", betreuer_id: 2)
-  azubi4: addAzubi(name: "Bastian", lastname: "Wenta", betreuer_id: 2)
+  betreuer1: addBetreuer(name: "Max", lastname: "Mustermann", abteilung: "Abteilung A")
+  betreuer2: addBetreuer(name: "Karen", lastname: "Musterfrau", abteilung: "Abteilung B")
+  azubi1: addAzubi(name: "Luigi", lastname: "Mario", betreuer_id: 1)
+  azubi2: addAzubi(name: "Mario", lastname: "Mario", betreuer_id: 1)
+  azubi3: addAzubi(name: "Peach", lastname: "Toadstool", betreuer_id: 2)
+  azubi4: addAzubi(name: "Daisy", lastname: "Desert", betreuer_id: 2)
 }
 ```
 \
