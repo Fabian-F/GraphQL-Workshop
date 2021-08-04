@@ -36,4 +36,4 @@ Should look like that\
 
 
 Start GraphQL Instance:<br />
-`node app.js`
+`node .\src\app.js`
