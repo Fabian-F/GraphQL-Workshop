@@ -30,7 +30,7 @@ async function update(id, name, lastname, abteilung) {
         query.push(`abteilung = '${abteilung}'`);
     }
 
-    const queryString = `UPDATE azubi SET ` + query.join(", ") + ` WHERE id = ${id}`;
+    const queryString = `UPDATE betreuer SET ` + query.join(", ") + ` WHERE id = ${id}`;
     console.log(queryString);
 
     let result = await pool.query(queryString);
