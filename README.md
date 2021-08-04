@@ -1,5 +1,5 @@
 Create Postgres Volume:\
-`docker volume create postgres`
+```docker volume create postgres```
 
 Start PostgreSQL Server (Docker):\
 `docker run --name postgres -v postgres:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres`
