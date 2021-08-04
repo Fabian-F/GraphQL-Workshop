@@ -12,8 +12,8 @@ async function getAll(){
 }
 
 // +++++ Mutations +++++
-async function create(name, lastname, betreuer_id){
-    await pool.query('INSERT INTO betreuer (name, lastname, betreuer_id) VALUES($1, $2, $3)', [name, lastname, betreuer_id]);
+async function create(name, lastname, abteilung){
+    await pool.query('INSERT INTO betreuer (name, lastname, abteilung) VALUES($1, $2, $3)', [name, lastname, abteilung]);
     return `Created Betreuer {name: ${name}, lastname: ${lastname}}`
 }
 

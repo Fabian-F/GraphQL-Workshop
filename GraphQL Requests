@@ -1,3 +1,12 @@
+mutation Step1 {
+  addBetreuer(name: "Jakob", lastname: "Klein", abteilung: "CES")
+  addAzubi(name: "Fabian", lastname: "Forster", betreuer_id: 1)
+}
+
+mutation Step2 {
+  addBetreuer(name: "Jakob", lastname: "Klein", abteilung: "CES")
+}
+
 query azubi {
   azubi(id: 1) {
     name
