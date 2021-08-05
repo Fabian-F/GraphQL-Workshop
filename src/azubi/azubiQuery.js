@@ -2,7 +2,7 @@ const graphql = require('graphql');
 const { AzubiType } = require('../Types')
 const azubiService = require('./azubiService');
 
-const { GraphQLID, GraphQLList } = graphql;
+const { GraphQLNonNull, GraphQLID, GraphQLList } = graphql;
 
 // +++++ Queries +++++
 const getAll = {
@@ -16,7 +16,7 @@ const getAll = {
 const getOne = {
     type: AzubiType,
     description: "Get one azubi by searching for the right id",
-    args: { id: { type: GraphQLID } },
+    args: { id: { type: GraphQLNonNull(GraphQLID) } },
     resolve: async (parent, {id}) => {
         const azubi = await azubiService.get(id);
         if(azubi === undefined) throw Error("ID not found");

@@ -6,6 +6,7 @@ const { GraphQLObjectType } = graphql;
 
 const Mutation = new GraphQLObjectType({
     name: 'Mutation',
+    description: "Mutation to change data",
     fields: {
         addAzubi: azubiMutation.add,
         updateAzubi: azubiMutation.update,

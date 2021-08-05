@@ -6,6 +6,7 @@ const { GraphQLObjectType } = graphql;
 
 const RootQuery = new GraphQLObjectType({
     name: 'RootQuery',
+    description: 'Query to get data',
     fields: {
         azubi: azubiQuery.getOne,
         azubis: azubiQuery.getAll,

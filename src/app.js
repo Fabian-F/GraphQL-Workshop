@@ -8,12 +8,12 @@ const app = express();
 
 const schema = new GraphQLSchema({
     query: query,
-    mutation: mutation
+    mutation: mutation,
 });
 
 app.use('/graphql', graphqlHTTP({
     schema,
-    graphiql:true
+    graphiql:true,
 }));
 
 app.listen(3000, () => {
