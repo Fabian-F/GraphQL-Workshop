@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "9aad4cc9-e519-4e9c-b1ab-ae16e1193578",
+		"name": "Request Examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GraphQL Request Postman",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  azubi1: azubis {\r\n    name\r\n    lastname\r\n  }\r\n}",
+						"variables": ""
+					},
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/azubis",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"azubis"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

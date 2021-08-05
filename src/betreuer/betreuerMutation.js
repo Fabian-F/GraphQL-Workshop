@@ -6,6 +6,7 @@ const { GraphQLString, GraphQLID, GraphQLNonNull } = graphql;
 // +++++ Mutations +++++
 const add = {
     type: GraphQLString,
+    description: "Add a new betreuer",
     args: {
         name: { type: GraphQLNonNull(GraphQLString) },
         lastname: { type: GraphQLNonNull(GraphQLString) },
@@ -18,6 +19,7 @@ const add = {
 
 const update = {
     type: GraphQLString,
+    description: "Update an existing betreuer",
     args: {
         id: { type: GraphQLNonNull(GraphQLID) },
         name: { type: GraphQLString },
@@ -31,6 +33,7 @@ const update = {
 
 const remove = {
     type: GraphQLString,
+    description: "Remove an existing betreuer",
     args: {
         id: { type: GraphQLNonNull(GraphQLID) }
     },

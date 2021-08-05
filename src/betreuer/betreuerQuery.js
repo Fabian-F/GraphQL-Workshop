@@ -7,6 +7,7 @@ const { GraphQLID, GraphQLList } = graphql;
 // +++++ Queries +++++
 const getAll = {
     type: GraphQLList(BetreuerType),
+    description: "Get all betreuer in the database",
     resolve: async () => {
         return await betreuerService.getAll();
     }
@@ -14,6 +15,7 @@ const getAll = {
 
 const getOne = {
     type: BetreuerType,
+    description: "Get one betreuer by searching for the right id",
     args: { id: { type: GraphQLID } },
     resolve: async (parent, {id}) => {
         const betreuer = await betreuerService.get(id);
@@ -22,16 +24,8 @@ const getOne = {
     }
 }
 
-// const getOneByParent = {
-//     type: BetreuerType,
-//     resolve: (azubi) => {
-//         return betreuerService.get(azubi.betreuer_id);
-//     }
-// }
-
 // +++++ Exports +++++
 module.exports = {
     getOne,
-    //getOneByParent,
     getAll
 }

@@ -6,6 +6,7 @@ const { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLList } = graphql;
 
 const AzubiType = new GraphQLObjectType({
     name: 'Azubi',
+    description: "Azubi object which represents a trainee",
     fields: () => ({
         id: { type: GraphQLID  },
         name: { type: GraphQLString },
@@ -22,6 +23,7 @@ const AzubiType = new GraphQLObjectType({
 
 const BetreuerType = new GraphQLObjectType({
     name: 'Betreuer',
+    description: "Betreuer object which represents a supervisor",
     fields: () => ({
         id: { type: GraphQLID  },
         name: { type: GraphQLString },
